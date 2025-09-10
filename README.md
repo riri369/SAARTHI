@@ -12,7 +12,7 @@ This project aims to bridge that gap with a mobile-first, crowdsourced solution 
 ## 📝 Detailed Description
 The system provides:
 
-Citizen Mobile App
+#### 1.Citizen Mobile App
 
 Submit reports instantly with image/video evidence.
 
@@ -30,7 +30,7 @@ Highlighting of high-priority areas based on urgency or frequency of reports.
 
 Status indicators for resolved vs pending issues.
 
-Administrative Portal
+#### 2.Administrative Portal
 
 Centralized dashboard for municipalities.
 
@@ -40,7 +40,7 @@ Automated report routing to the relevant department (sanitation, roads, water, p
 
 Task assignment, updates, and citizen communication.
 
-Backend & Infrastructure
+#### 3.Backend & Infrastructure
 
 Resilient architecture with scalability to handle spikes in traffic.
 
