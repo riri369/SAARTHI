@@ -97,12 +97,18 @@ Notifications: Firebase Cloud
 ## 📂 Repository Structure
 
 root/
-│── mobile-app/            # Flutter/React Native codebase
-│── admin-portal/          # Web dashboard for municipalities
-│── backend/               # Python backend (APIs + routing engine)
-│── docs/                  # Documentation and flow diagrams
-│── scripts/               # Deployment & utility scripts
-│── README.md              # Project documentation
+
+│── mobile-app/  # Flutter/React Native codebase
+
+│── admin-portal/  # Web dashboard for municipalities
+
+│── backend/  # Python backend (APIs + routing engine)
+
+│── docs/  # Documentation and flow diagrams
+
+│── scripts/  # Deployment & utility scripts
+
+│── README.md  # Project documentation
 
 
 
