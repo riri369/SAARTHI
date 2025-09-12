@@ -3,17 +3,20 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import { useNavigate } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
-import "../Styles/ReportsPage.css";
+import "../Styles/ReportPage.css";
 
 const cityCoordinates = {
   Bhubaneswar: [20.296059, 85.824539],
   Cuttack: [20.462521, 85.882988],
   Puri: [19.813457, 85.831207],
   Rourkela: [22.227056, 84.861181],
+  Sundargarh: [22.1096, 84.0271],
+  Berhampur: [19.3143, 84.7914],
+  Sambalpur: [21.4667, 83.9667],
 };
 
 const statusColors = {
-  Pending: "gold",
+  Reported: "gold",
   "In Progress": "royalblue",
   Resolved: "limegreen",
 };
@@ -27,38 +30,21 @@ const customMarker = (status) =>
   });
 
 const problems = [
-  {
-    id: "1",
-    title: "Pothole near MG Road",
-    description: "Large pothole causing safety hazard to vehicles.",
-    dept: "Public Works",
-    status: "Pending",
-    location: "Bhubaneswar",
-  },
-  {
-    id: "2",
-    title: "Streetlight not working",
-    description: "Streetlight on Elm Street is broken for over a week.",
-    dept: "Electrical",
-    status: "In Progress",
-    location: "Cuttack",
-  },
-  {
-    id: "3",
-    title: "Overflowing trash bin in park",
-    description: "Trash bins have not been emptied in two weeks.",
-    dept: "Sanitation",
-    status: "Resolved",
-    location: "Puri",
-  },
-  {
-    id: "4",
-    title: "Broken bench in city square",
-    description: "Bench slats are broken and pose splinter risk.",
-    dept: "Public Works",
-    status: "Pending",
-    location: "Rourkela",
-  },
+  { id: "ELO-2025-001", title: "Streetlight", dept: "Electrical", status: "Reported", location: "Bhubaneswar" },
+  { id: "ELO-2025-002", title: "Power Outage", dept: "Electrical", status: "Reported", location: "Cuttack" },
+  { id: "ELO-2025-003", title: "Wire Snapped", dept: "Electrical", status: "Reported", location: "Puri" },
+  { id: "ELO-2025-004", title: "Transformer", dept: "Electrical", status: "Resolved", location: "Sundargarh" },
+  { id: "ELO-2025-005", title: "Meter Fault", dept: "Electrical", status: "In Progress", location: "Berhampur" },
+  { id: "E-OR-001", title: "Streetlight", dept: "Electrical", status: "Resolved", location: "Cuttack" },
+  { id: "E-OR-002", title: "Transformer", dept: "Electrical", status: "In Progress", location: "Bhubaneswar" },
+  { id: "E-OR-003", title: "Power Outage", dept: "Electrical", status: "In Progress", location: "Berhampur" },
+  { id: "E-OR-004", title: "Meter Fault", dept: "Electrical", status: "Resolved", location: "Sambalpur" },
+  { id: "E-OR-005", title: "Wire Snapped", dept: "Electrical", status: "Reported", location: "Puri" },
+  { id: "EIR-OD-0001", title: "Streetlight", dept: "Electrical", status: "In Progress", location: "Bhubaneswar" },
+  { id: "EIR-OD-0002", title: "Power Outage", dept: "Electrical", status: "In Progress", location: "Cuttack" },
+  { id: "EIR-OD-0003", title: "Transformer", dept: "Electrical", status: "Resolved", location: "Sambalpur" },
+  { id: "EIR-OD-0004", title: "Meter Fault", dept: "Electrical", status: "Resolved", location: "Rourkela" },
+  { id: "EIR-OD-0005", title: "Wire Snapped", dept: "Electrical", status: "Reported", location: "Berhampur" },
 ];
 
 function StatusColumn({ title, problemsList }) {
@@ -68,7 +54,7 @@ function StatusColumn({ title, problemsList }) {
     <div className="report-column">
       <h3 className="column-title">{title}</h3>
       <div className="column-items">
-        {problemsList.length === 0 && <p className="empty-text">No problems</p>}
+        {problemsList.length === 0 && <p className="empty-text">No issues reported</p>}
         {problemsList.map((p) => (
           <div
             key={p.id}
@@ -79,7 +65,6 @@ function StatusColumn({ title, problemsList }) {
             onKeyDown={(e) => e.key === "Enter" && navigate(`/pothole/${p.id}`)}
           >
             <strong>{p.id}</strong> - {p.title}
-            <p>{p.description}</p>
           </div>
         ))}
       </div>
@@ -99,7 +84,7 @@ const ReportPage = () => {
     );
   }, [departmentFilter, statusFilter]);
 
-  const pendingProblems = filteredProblems.filter((p) => p.status === "Pending");
+  const reportedProblems = filteredProblems.filter((p) => p.status === "Reported");
   const inProgressProblems = filteredProblems.filter((p) => p.status === "In Progress");
   const resolvedProblems = filteredProblems.filter((p) => p.status === "Resolved");
 
@@ -117,16 +102,14 @@ const ReportPage = () => {
             Department:
             <select value={departmentFilter} onChange={e => setDepartmentFilter(e.target.value)}>
               <option value="All">All</option>
-              <option value="Public Works">Public Works</option>
               <option value="Electrical">Electrical</option>
-              <option value="Sanitation">Sanitation</option>
             </select>
           </label>
           <label>
             Status:
             <select value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
               <option value="All">All</option>
-              <option value="Pending">Pending</option>
+              <option value="Reported">Reported</option>
               <option value="In Progress">In Progress</option>
               <option value="Resolved">Resolved</option>
             </select>
@@ -152,7 +135,7 @@ const ReportPage = () => {
           </MapContainer>
         </div>
         <div className="columns-container">
-          <StatusColumn title="Pending" problemsList={pendingProblems} />
+          <StatusColumn title="Reported" problemsList={reportedProblems} />
           <StatusColumn title="In Progress" problemsList={inProgressProblems} />
           <StatusColumn title="Resolved" problemsList={resolvedProblems} />
         </div>
