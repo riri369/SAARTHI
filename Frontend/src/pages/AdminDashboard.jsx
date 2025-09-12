@@ -1,15 +1,27 @@
 import React from "react";
 import { Bar, Pie } from "react-chartjs-2";
 import {
-  Chart as ChartJS,  CategoryScale,
-  LinearScale,  BarElement,
-  ArcElement,  Title,
-  Tooltip,  Legend,
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend,
 } from "chart.js";
 
 import "../Styles/AdminDashboard.css";
 
-ChartJS.register( CategoryScale,  LinearScale, BarElement,  ArcElement, Title,  Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const AdminDashboard = ({ user }) => {
   const stats = { submitted: 120, resolved: 85, inProgress: 25 };
@@ -62,18 +74,22 @@ const AdminDashboard = ({ user }) => {
       title: { display: true, text: "Problem Status Distribution" },
     },
   };
+
+  // logout function should be passed down from parent if needed
+  // here's a placeholder just for ensure no errors if used
   const handleLogout = () => {
     localStorage.removeItem("saarthiUser");
+    // navigation back to login should be handled outside or via react-router
   };
 
   return (
     <div className="admin-dashboard">
       <div className="page-container">
+        {/* Header should be rendered in App.jsx, so omitted here */}
         <main className="content">
           <h2>Department Insights</h2>
 
           <div className="dashboard-container">
-            
             {/* Complaints stats and pie chart side by side */}
             <section className="stats-overview">
               <div className="stats-cards">
