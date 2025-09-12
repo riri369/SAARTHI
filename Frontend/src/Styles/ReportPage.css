@@ -1,5 +1,3 @@
-/* Styles/ReportsPage.css */
-
 .page-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -52,6 +50,16 @@ h2 {
 .filters select:focus {
   border-color: #405da9;
   outline: none;
+}
+
+.map-container {
+  width: 100%;
+  height: 320px;
+  margin-bottom: 26px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(44, 62, 80, 0.12);
+  background: #e5e7eb;
 }
 
 .table-container {
@@ -143,10 +151,18 @@ td.resolved {
     font-size: 0.98rem;
     padding: 8px 5px;
   }
+  .map-container {
+    height: 220px;
+    margin-bottom: 18px;
+  }
 }
 
 @media (max-width: 600px) {
   table {
     font-size: 0.93rem;
+  }
+  .map-container {
+    height: 150px;
+    margin-bottom: 12px;
   }
 }
