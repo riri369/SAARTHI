@@ -31,26 +31,30 @@ const AdminDashboard = ({ user }) => {
     { name: "Rahul Verma", points: 95 },
   ];
 
-  const barData = {
-    labels: ["Submitted", "Resolved", "In Progress"],
+  const performersBarData = {
+    labels: topPerformers.map((user) => user.name),
     datasets: [
       {
-        label: "Problems",
-        data: [stats.submitted, stats.resolved, stats.inProgress],
-        backgroundColor: ["#1e40af", "#16a34a", "#d97706"],
+        label: "Points",
+        data: topPerformers.map((user) => user.points),
+        backgroundColor: "#16a34a",
         borderRadius: 5,
       },
     ],
   };
 
-  const barOptions = {
+  const performersBarOptions = {
     responsive: true,
     plugins: {
       legend: { display: false },
-      title: { display: true, text: "Department Insights", font: { size: 18 } },
+      title: { display: true, text: "Top Performers", font: { size: 18 } },
       tooltip: { enabled: true },
     },
-    scales: { y: { beginAtZero: true, ticks: { stepSize: 20 } } },
+    scales: { 
+      y: { beginAtZero: true, ticks: { stepSize: 20 } },
+      x: { ticks: { font: { size: 14 } } },
+    },
+    indexAxis: 'y',
   };
 
   const pieData = {
@@ -68,70 +72,62 @@ const AdminDashboard = ({ user }) => {
 
   const pieOptions = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: { position: "bottom" },
       tooltip: { enabled: true },
-      title: { display: true, text: "Problem Status Distribution" },
+      title: { display: false },
     },
-  };
-
-  // logout function should be passed down from parent if needed
-  // here's a placeholder just for ensure no errors if used
-  const handleLogout = () => {
-    localStorage.removeItem("saarthiUser");
-    // navigation back to login should be handled outside or via react-router
   };
 
   return (
     <div className="admin-dashboard">
       <div className="page-container">
-        {/* Header should be rendered in App.jsx, so omitted here */}
         <main className="content">
           <h2>Department Insights</h2>
 
-          <div className="dashboard-container">
-            {/* Complaints stats and pie chart side by side */}
-            <section className="stats-overview">
-              <div className="stats-cards">
-                <div className="card submitted">
-                  <h2>Total Submitted</h2>
-                  <p>{stats.submitted}</p>
+          {/* Unified Card: Stats + Pie Chart */}
+          <div className="overview-card">
+            <div className="card-header">Problems Overview</div>
+            <div className="card-body">
+              <div className="stats-column">
+                <div className="overview-stat-card submitted">
+                  <div className="stat-label">Total Submitted</div>
+                  <div className="stat-value">{stats.submitted}</div>
                 </div>
-                <div className="card resolved">
-                  <h2>Resolved</h2>
-                  <p>{stats.resolved}</p>
+                <div className="overview-stat-card resolved">
+                  <div className="stat-label">Resolved</div>
+                  <div className="stat-value">{stats.resolved}</div>
                 </div>
-                <div className="card in-progress">
-                  <h2>In Progress</h2>
-                  <p>{stats.inProgress}</p>
+                <div className="overview-stat-card in-progress">
+                  <div className="stat-label">In Progress</div>
+                  <div className="stat-value">{stats.inProgress}</div>
                 </div>
               </div>
+              <div className="pie-column">
+                <div className="pie-wrapper">
+                  <Pie data={pieData} options={pieOptions} />
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <div className="pie-container">
-                <h2 className="chart-title">Problems Breakdown</h2>
-                <Pie data={pieData} options={pieOptions} />
+          {/* Top Performers Row */}
+          <div className="performers-table-bar-row">
+            <div className="top-performers-table-card">
+              <div className="table-header">Top Performers</div>
+              <div className="table-performers-list">
+                {topPerformers.map((user, idx) => (
+                  <div key={idx} className="table-performer-row">
+                    <span className="table-performer-name">{user.name}</span>
+                    <span className="table-performer-points">{user.points} pts</span>
+                  </div>
+                ))}
               </div>
-            </section>
-
-            {/* Top Performers and bar chart side by side */}
-            <section className="performers-charts">
-              <div className="top-performers">
-                <h2>Top Performers</h2>
-                <div className="performers-cards">
-                  {topPerformers.map((user, idx) => (
-                    <div key={idx} className="performer-card">
-                      <div className="performer-name">{user.name}</div>
-                      <div className="performer-points">{user.points} pts</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bar-container">
-                <h2 className="chart-title">Problems Overview</h2>
-                <Bar data={barData} options={barOptions} />
-              </div>
-            </section>
+            </div>
+            <div className="performers-bar-outer">
+              <Bar data={performersBarData} options={performersBarOptions} />
+            </div>
           </div>
         </main>
       </div>
@@ -140,3 +136,4 @@ const AdminDashboard = ({ user }) => {
 };
 
 export default AdminDashboard;
+ 
