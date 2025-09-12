@@ -33,14 +33,15 @@
   text-align: center;
 }
 
+/* Accent borders for card types */
 .card-submitted {
-  border-left: 6px solid #1e40af; 
+  border-left: 6px solid #1e40af; /* blue */
 }
 
 .card-resolved {
-  border-left: 6px solid #16a34a; 
+  border-left: 6px solid #16a34a; /* green */
 }
 
 .card-in-progress {
-  border-left: 6px solid #d97706; 
+  border-left: 6px solid #d97706; /* amber/orange */
 }

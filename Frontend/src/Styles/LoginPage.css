@@ -1,26 +1,42 @@
 /* Styles/LoginPage.css */
-
 .login-bg {
   min-height: 100vh;
-  background: #f5f7fa;
+  background-image: linear-gradient(#050e55, #2c3ec8);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .login-card {
-  background: #fff;
+  background: whitesmoke;
   border-radius: 12px;
-  box-shadow: 0 4px 32px rgba(44, 62, 80, 0.08);
+  box-shadow: 0 4px 32px rgba(4, 18, 108, 0);
   padding: 36px 32px;
   width: 100%;
   max-width: 370px;
   transition: box-shadow 0.3s;
 }
-
 .login-card:hover {
-  box-shadow: 0 8px 40px rgba(44, 62, 80, 0.13);
+  box-shadow: 0 8px 40px rgba(123, 123, 152, 0.375);
 }
+.login-form input {
+  padding: 0.6rem;
+  border: 1px solid #050e55;
+  outline: none;
+}
+.login-form button {
+  padding: 0.7rem;
+  background-color: #050e55;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login-form button:hover {
+  background-color: white;
+  color: #050e55;
+
+}
+
+
 
 .login-content {
   display: flex;
@@ -80,12 +96,12 @@
 }
 
 .login-input:focus {
-  border-color: #5874c1;
+  border-color: #062783;
   background: #eef3fa;
 }
 
 .login-button {
-  background: #5874c1;
+  background: #000000;
   color: #fff;
   padding: 11px 0;
   border: none;
@@ -102,8 +118,8 @@
 }
 
 .error-message {
-  color: #d14545;
-  background: #f9ebeb;
+  color: #aa0a0a;
+  background: #ffffff;
   padding: 6px 10px;
   border-radius: 5px;
   margin-top: 8px;

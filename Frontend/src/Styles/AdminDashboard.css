@@ -23,6 +23,7 @@ h2 {
   margin-bottom: 18px;
 }
 
+/* -- Layout Containers -- */
 
 .dashboard-container {
   display: flex;
@@ -30,6 +31,7 @@ h2 {
   gap: 42px;
 }
 
+/* Complaints stats and pie chart side by side */
 .stats-overview {
   display: flex;
   gap: 36px;
