@@ -12,7 +12,6 @@ const potholeDetails = {
       "There is a large pothole on the main road of this residential area that needs immediate attention. The pothole has been causing significant inconvenience to commuters and poses a serious safety risk to vehicles, especially during night hours.",
     status: "reported",
     img: "https://sripath.com/wp-content/uploads/2025/01/iStock-174662203-1200x800.jpg",
-    mapImg: "https://via.placeholder.com/400x200/3b82f6/ffffff?text=Map+Location",
   },
   2: {
     title: "Street Light Issue",
@@ -23,9 +22,8 @@ const potholeDetails = {
       "The street light pole near the community park has been non-functional for the past week, creating safety concerns for evening joggers and pedestrians.",
     status: "in-progress",
     img: "https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=600&q=80",
-    mapImg: "https://via.placeholder.com/400x200/3b82f6/ffffff?text=Map+Location",
   },
-  // Add more pothole details as needed...
+  // More pothole details can be added here...
 };
 
 export default function PotholeDetail() {
@@ -33,64 +31,59 @@ export default function PotholeDetail() {
   const navigate = useNavigate();
 
   const pothole = potholeDetails[id] || {
-    title: `Pothole #${id}`,
-    location: "Unknown Location",
-    phone: "N/A",
-    description: "Description not available.",
-    details: "Further details are not available at the moment.",
-    status: "unknown",
+    title: `Pothole`,
+    location: "Bhubaneswar, Odisha",
+    phone: "1234567890",
+    description: "There is a big pothole in this area. Please resolve it.",
+    status: "Reported",
     img: "https://images.unsplash.com/photo-1515548214299-cf1a74df104b?auto=format&fit=crop&w=600&q=80",
-    mapImg: "https://via.placeholder.com/400x200/3b82f6/ffffff?text=Map+Location",
   };
 
   return (
     <div className="pothole-detail-container">
-     <main className="pothole-detail-main">
-        <article className="detail-card" aria-labelledby="detail-title">
-          <img src={pothole.img} alt={pothole.title} className="detail-img" />
+      {/* Header section */}
+      <header className="detail-header" aria-label="Pothole detail header">
+        <h1 className="detail-title">{pothole.title}</h1>
+        <p className="detail-location" aria-label="Location">
+          📍 {pothole.location}
+        </p>
+        <p className="detail-phone" aria-label="Contact phone">
+          📞 {pothole.phone}
+        </p>
+      </header>
 
-          <section className="detail-content">
-            <h2 id="detail-title" className="detail-title">{pothole.title}</h2>
-            <p className="detail-description">{pothole.description}</p>
+      {/* Image below header */}
+      <img
+        src={pothole.img}
+        alt={pothole.title}
+        className="detail-img"
+      />
 
-            <address className="detail-meta">
-              <p className="detail-location" aria-label="Location">
-                📍 {pothole.location}
-              </p>
-              <p className="detail-phone" aria-label="Contact phone">
-                📞 {pothole.phone}
-              </p>
-            </address>
+      {/* Description and details below image */}
+      <main className="detail-main-content">
+        <p className="detail-description">{pothole.description}</p>
+        <section className="detail-details">{pothole.details}</section>
 
-            <section className="detail-details">{pothole.details}</section>
-
-            <div className="map-section">
-              <img src={pothole.mapImg} alt={`Map location for ${pothole.title}`} className="map-img" />
-            </div>
-
-            <div className="detail-actions">
-              {/* These buttons should eventually trigger relevant status updates */}
-              <button className="btn btn-inprogress" aria-label="Mark as In Progress">
-                In Progress
-              </button>
-              <button className="btn btn-resolve" aria-label="Mark as Resolved">
-                Resolve
-              </button>
-            </div>
-          </section>
-        </article>
-
-       <div className="back-button-container">
-  <button
-    className="back-button"
-    onClick={() => navigate("/reports")}
-    aria-label="Back to reports dashboard"
-  >
-    &larr; Back to Reports
-  </button>
-</div>
-
+        <div className="detail-actions">
+          <button className="btn btn-inprogress" aria-label="Mark as In Progress">
+            In Progress
+          </button>
+          <button className="btn btn-resolve" aria-label="Mark as Resolved">
+            Resolve
+          </button>
+        </div>
       </main>
+
+      {/* Back button */}
+      <div className="back-button-container">
+        <button
+          className="back-button"
+          onClick={() => navigate("/reports")}
+          aria-label="Back to reports dashboard"
+        >
+          &larr; Back to Reports
+        </button>
+      </div>
     </div>
   );
 }
