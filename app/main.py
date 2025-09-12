@@ -11,10 +11,10 @@ from app.config import settings
 from app.database import connect_to_mongo, close_mongo_connection, init_sample_data
 
 # Import route modules
-from routes.auth import router as auth_router
-from routes.reports import router as reports_router
-from routes.stats import router as stats_router
-from routes.users import router as users_router
+from app.routes.auth import router as auth_router
+from app.routes.reports import router as reports_router
+from app.routes.stats import router as stats_router
+from app.routes.users import router as users_router
 
 # Application lifespan management
 @asynccontextmanager
@@ -85,7 +85,7 @@ async def health_check():
     Health check endpoint for monitoring
     """
     try:
-        from database import get_database
+        from app.database import get_database
         db = await get_database()
         # Test database connection
         await db.command("ping")

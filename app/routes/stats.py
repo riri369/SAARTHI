@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, status, Depends
 from typing import List
 from app.models import StatsResponse, TopPerformer, OverallStats, UserInDB
-from auth import get_current_active_user
+from app.auth import get_current_active_user
 from app.database import get_database
-from utils import handle_database_error
+from app.utils import handle_database_error
 
 router = APIRouter(prefix="/stats", tags=["Statistics"])
 

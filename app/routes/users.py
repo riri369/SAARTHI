@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, status, Depends
 from typing import List
 from app.models import UserOut, UserCreate, UserUpdate, MessageResponse, UserInDB
-from auth import get_current_active_user, require_admin_role, get_password_hash
+from app.auth import get_current_active_user, require_admin_role, get_password_hash
 from app.database import get_database
-from utils import validate_employee_id, handle_database_error
+from app.utils import validate_employee_id, handle_database_error
 from datetime import datetime
 
 router = APIRouter(prefix="/users", tags=["Users"])

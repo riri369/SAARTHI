@@ -1,14 +1,14 @@
 from fastapi import APIRouter, HTTPException, status, Depends, Query
 from typing import List, Optional
 from datetime import datetime
-from models import (
+from app.models import (
     ReportCreate, ReportUpdate, ReportOut, ReportFilter, 
     PaginatedResponse, MessageResponse, UserInDB, ReportStatus, 
     Department, ReportPriority
 )
-from auth import get_current_active_user, require_admin_role
+from app.auth import get_current_active_user, require_admin_role
 from app.database import get_database
-from utils import (
+from app.utils import (
     generate_report_id, validate_coordinates, get_city_from_coordinates,
     calculate_priority_from_keywords, build_report_filter, 
     validate_status_transition, handle_database_error, calculate_user_points
