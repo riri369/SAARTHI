@@ -1,0 +1,46 @@
+/* Styles/StatsCard.css */
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.08);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 160px;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  box-shadow: 0 6px 28px rgba(44, 62, 80, 0.13);
+}
+
+.card h2 {
+  font-size: 1.06rem;
+  font-weight: 600;
+  color: #405da9;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #213047;
+  margin: 0;
+  text-align: center;
+}
+
+.card-submitted {
+  border-left: 6px solid #1e40af; 
+}
+
+.card-resolved {
+  border-left: 6px solid #16a34a; 
+}
+
+.card-in-progress {
+  border-left: 6px solid #d97706; 
+}
