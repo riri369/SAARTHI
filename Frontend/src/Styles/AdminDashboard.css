@@ -1,0 +1,222 @@
+/* Styles/AdminDashboard.css */
+
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f5f7fa;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+.content {
+  padding: 20px 16px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.stats-overview {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.stats-cards {
+  display: flex;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.stats-cards .card {
+  flex: 1;
+  min-width: 160px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.08);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.stats-cards .card:hover {
+  box-shadow: 0 6px 28px rgba(44, 62, 80, 0.13);
+}
+
+.stats-cards .card h2 {
+  font-size: 1.06rem;
+  font-weight: 600;
+  color: #405da9;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.stats-cards .card p {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #213047;
+  margin: 0;
+  text-align: center;
+}
+
+/* Left borders for different types */
+.card.submitted {
+  border-left: 6px solid #1e40af; /* blue */
+}
+
+.card.resolved {
+  border-left: 6px solid #16a34a; /* green */
+}
+
+.card.in-progress {
+  border-left: 6px solid #d97706; /* amber */
+}
+
+.pie-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 26px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.chart-title {
+  font-size: 1.1rem;
+  color: #405da9;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Top Performers and bar chart side by side */
+.performers-charts {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.top-performers {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.08);
+  padding: 24px 20px;
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-performers h2 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 1.11rem;
+  color: #405da9;
+}
+
+.performers-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+}
+
+.performer-card {
+  background: #f7fafd;
+  border-radius: 8px;
+  padding: 13px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(82, 108, 130, 0.08);
+}
+
+.performer-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.performer-points {
+  font-size: 1rem;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.bar-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.08);
+  padding: 24px 20px;
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-container .chart-title {
+  margin-bottom: 20px;
+}
+
+/* Chart canvas sizing */
+.bar-container canvas,
+.pie-container canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .stats-overview,
+  .performers-charts {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .pie-container,
+  .bar-container,
+  .top-performers {
+    min-width: unset;
+  }
+  .stats-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .stats-cards .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding: 12px 8px;
+  }
+}
