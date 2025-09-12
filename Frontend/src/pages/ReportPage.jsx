@@ -1,6 +1,29 @@
-// src/pages/ReportPage.jsx
 import React, { useState, useMemo } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import "../Styles/ReportPage.css";
+
+const cityCoordinates = {
+  Bhubaneswar: [20.296059, 85.824539],
+  Cuttack: [20.462521, 85.882988],
+  Puri: [19.813457, 85.831207],
+  Rourkela: [22.227056, 84.861181]
+};
+
+const statusColors = {
+  "Pending": "gold",
+  "In Progress": "royalblue",
+  "Resolved": "limegreen"
+};
+
+const customMarker = (status) =>
+  new L.DivIcon({
+    className: "",
+    html: `<svg width="28" height="28" viewBox="0 0 32 32" fill="${statusColors[status] || 'gray'}" stroke="black" stroke-width="1.5"><circle cx="16" cy="16" r="12"/></svg>`,
+    iconSize: [28, 28],
+    iconAnchor: [14, 28]
+  });
 
 const ReportPage = () => {
   const [departmentFilter, setDepartmentFilter] = useState("All");
@@ -8,10 +31,10 @@ const ReportPage = () => {
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "ascending" });
 
   const [reports, setReports] = useState([
-    { id: "R001", user: "Ananya Gupta", desc: "Pothole near MG Road", dept: "Public Works", status: "Pending" },
-    { id: "R002", user: "Vikram Singh", desc: "Streetlight not working", dept: "Electrical", status: "In Progress" },
-    { id: "R003", user: "Meena Nair", desc: "Overflowing trash bin", dept: "Sanitation", status: "Resolved" },
-    { id: "R004", user: "Rohit Kumar", desc: "Broken bench", dept: "Public Works", status: "Pending" },
+    { id: "R001", user: "Ananya Gupta", desc: "Pothole near MG Road", dept: "Public Works", status: "Pending", location: "Bhubaneswar" },
+    { id: "R002", user: "Vikram Singh", desc: "Streetlight not working", dept: "Electrical", status: "In Progress", location: "Cuttack" },
+    { id: "R003", user: "Meena Nair", desc: "Overflowing trash bin", dept: "Sanitation", status: "Resolved", location: "Puri" },
+    { id: "R004", user: "Rohit Kumar", desc: "Broken bench", dept: "Public Works", status: "Pending", location: "Rourkela" }
   ]);
 
   // Update status cycle: Pending -> In Progress -> Resolved
@@ -19,7 +42,7 @@ const ReportPage = () => {
     setReports((prev) =>
       prev.map((r) =>
         r.id === id
-          ? { ...r, status: r.status === "Pending" ? "In Progress" : "Resolved" }
+          ? { ...r, status: r.status === "Pending" ? "In Progress" : r.status === "In Progress" ? "Resolved" : "Resolved" }
           : r
       )
     );
@@ -59,6 +82,12 @@ const ReportPage = () => {
     return filteredReports;
   }, [reports, departmentFilter, statusFilter, sortConfig]);
 
+  // Center the map: Odisha or first marker location
+  const mapCenter =
+    displayedReports.length === 0
+      ? [20.9517, 85.0985]
+      : cityCoordinates[displayedReports[0].location] || [20.9517, 85.0985];
+
   return (
     <div className="page-container">
       <main className="content">
@@ -87,6 +116,30 @@ const ReportPage = () => {
           </label>
         </div>
 
+        {/* Map */}
+        <div className="map-container">
+          <MapContainer center={mapCenter} zoom={7.2} scrollWheelZoom={false} style={{ height: "100%", width: "100%" }}>
+            <TileLayer
+              attribution='Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {displayedReports.map((r) => (
+              <Marker
+                key={r.id}
+                position={cityCoordinates[r.location]}
+                icon={customMarker(r.status)}
+              >
+                <Popup>
+                  <b>{r.user}</b><br />
+                  {r.desc}<br />
+                  <b>Status:</b> {r.status}<br />
+                  <b>Location:</b> {r.location}
+                </Popup>
+              </Marker>
+            ))}
+          </MapContainer>
+        </div>
+
         {/* Table */}
         <div className="table-container">
           <table>
@@ -96,6 +149,7 @@ const ReportPage = () => {
                 <th onClick={() => requestSort("user")}>User</th>
                 <th onClick={() => requestSort("desc")}>Description</th>
                 <th onClick={() => requestSort("dept")}>Department</th>
+                <th onClick={() => requestSort("location")}>Location</th>
                 <th onClick={() => requestSort("status")}>Status</th>
                 <th>Action</th>
               </tr>
@@ -107,6 +161,7 @@ const ReportPage = () => {
                   <td>{r.user}</td>
                   <td>{r.desc}</td>
                   <td>{r.dept}</td>
+                  <td>{r.location}</td>
                   <td className={r.status.replace(" ", "-").toLowerCase()}>{r.status}</td>
                   <td>
                     <button onClick={() => updateStatus(r.id)}>Update Status</button>
