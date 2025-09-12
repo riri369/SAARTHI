@@ -1,0 +1,152 @@
+/* Styles/ReportsPage.css */
+
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 0;
+  min-height: 100vh;
+  background: #f5f7fa;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.content {
+  padding: 20px 16px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #405da9;
+  margin-bottom: 12px;
+}
+
+.filters {
+  display: flex;
+  gap: 28px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 14px rgba(44, 62, 80, 0.08);
+  margin-bottom: 22px;
+}
+
+.filters label {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.filters select {
+  margin-left: 8px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid #dde4ea;
+  background: #f7fafd;
+  color: #455964;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.filters select:focus {
+  border-color: #405da9;
+  outline: none;
+}
+
+.table-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px rgba(44, 62, 80, 0.10);
+  padding: 16px 18px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  margin: 0;
+}
+
+th, td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #ececec;
+}
+
+th {
+  background: #f7fafd;
+  color: #405da9;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+th:hover {
+  background: #e1e8f2;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td button {
+  padding: 6px 18px;
+  background: #405da9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+td button:hover {
+  background: #213047;
+}
+
+td.pending {
+  color: #d97706;
+  font-weight: 600;
+  background: #fff7ea;
+  border-radius: 6px;
+}
+
+td.in-progress {
+  color: #1e40af;
+  font-weight: 600;
+  background: #e6edff;
+  border-radius: 6px;
+}
+
+td.resolved {
+  color: #16a34a;
+  font-weight: 600;
+  background: #e8fae8;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .filters {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .page-container, .content {
+    padding: 12px 4px;
+  }
+  .table-container {
+    padding: 10px 3px;
+  }
+  table, th, td {
+    font-size: 0.98rem;
+    padding: 8px 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  table {
+    font-size: 0.93rem;
+  }
+}
