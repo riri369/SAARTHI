@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import { useNavigate } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
-import "../Styles/ReportPage.css";
+import "../Styles/ReportsPage.css";
 
 const cityCoordinates = {
   Bhubaneswar: [20.296059, 85.824539],
