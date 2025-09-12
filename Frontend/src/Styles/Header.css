@@ -28,7 +28,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 1.05rem;
-  color: #374151;
+  color: white;
   padding: 6px 10px;
   border-radius: 6px;
   transition: background-color 0.2s, color 0.2s;
@@ -54,7 +54,7 @@
 
 .welcome {
   font-size: 1rem;
-  color: #5b6770;
+  color: white;
   font-weight: 500;
   white-space: nowrap;
 }
