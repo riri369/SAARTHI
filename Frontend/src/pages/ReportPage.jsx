@@ -1,6 +1,6 @@
 // src/pages/ReportPage.jsx
 import React, { useState, useMemo } from "react";
-import "../Styles/ReportsPage.css";
+import "../Styles/ReportPage.css";
 
 const ReportPage = () => {
   const [departmentFilter, setDepartmentFilter] = useState("All");
