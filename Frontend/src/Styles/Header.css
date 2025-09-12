@@ -1,0 +1,100 @@
+/* Styles/Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #405da9; 
+  padding: 14px 28px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left .logo {
+  font-size: 1.9rem;
+  font-weight: 700;
+  font-family: fantasy;
+  color: #f0f0f0;
+  margin: 0;
+  user-select: none;
+}
+
+.header-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.header-nav a {
+  
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #eceef0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.header-nav a:hover{
+    text-decoration: underline;}
+.header-nav a:hover,
+.header-nav a:focus {
+  background-color: #e1e8f2;
+  color: #1e40af;
+  outline: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.welcome {
+  font-size: 1rem;
+  color: #eaeaea;
+  font-weight: 500;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  white-space: nowrap;
+}
+
+.logout-btn {
+  background-color: #d04545;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 0.97rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+  background-color: #a83434;
+  outline: none;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 720px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header-nav {
+    flex-basis: 100%;
+    justify-content: center;
+    gap: 18px;
+  }
+  .header-right {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  .welcome {
+    font-size: 0.95rem;
+  }
+}
