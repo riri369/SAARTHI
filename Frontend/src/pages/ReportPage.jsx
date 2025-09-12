@@ -99,13 +99,6 @@ const ReportPage = () => {
         <h2>Problem Reports</h2>
         <div className="filters">
           <label>
-            Department:
-            <select value={departmentFilter} onChange={e => setDepartmentFilter(e.target.value)}>
-              <option value="All">All</option>
-              <option value="Electrical">Electrical</option>
-            </select>
-          </label>
-          <label>
             Status:
             <select value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
               <option value="All">All</option>
