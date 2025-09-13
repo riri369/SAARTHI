@@ -1,9 +1,9 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import { useNavigate } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
-import "../Styles/ReportPage.css";
+import "../Styles/ReportsPage.css";
 
 const cityCoordinates = {
   Bhubaneswar: [20.296059, 85.824539],
@@ -19,20 +19,22 @@ const statusColors = {
   Reported: "gold",
   "In Progress": "royalblue",
   Resolved: "limegreen",
+  SOS: "red",
 };
 
 const customMarker = (status) =>
   new L.DivIcon({
     className: "",
-    html: `<svg width="28" height="28" viewBox="0 0 32 32" fill="${statusColors[status] || "gray"}" stroke="black" stroke-width="1.5"><circle cx="16" cy="16" r="12"/></svg>`,
+    html: `<div style="
+      background:${statusColors[status] || "gray"};
+      width:22px;height:22px;border-radius:50%;border:3px solid white;
+      box-shadow:0 0 8px rgba(55,0,0,0.4);
+      "></div>`,
     iconSize: [28, 28],
     iconAnchor: [14, 28],
   });
 
-const problems = [
-  { id: "ELO-2025-001", title: "Streetlight", dept: "Electrical", status: "Reported", location: "Bhubaneswar" },
-  { id: "ELO-2025-002", title: "Power Outage", dept: "Electrical", status: "Reported", location: "Cuttack" },
-  { id: "ELO-2025-003", title: "Wire Snapped", dept: "Electrical", status: "Reported", location: "Puri" },
+const initialProblems = [
   { id: "ELO-2025-004", title: "Transformer", dept: "Electrical", status: "Resolved", location: "Sundargarh" },
   { id: "ELO-2025-005", title: "Meter Fault", dept: "Electrical", status: "In Progress", location: "Berhampur" },
   { id: "E-OR-001", title: "Streetlight", dept: "Electrical", status: "Resolved", location: "Cuttack" },
@@ -47,94 +49,219 @@ const problems = [
   { id: "EIR-OD-0005", title: "Wire Snapped", dept: "Electrical", status: "Reported", location: "Berhampur" },
 ];
 
-function StatusColumn({ title, problemsList }) {
+function StatusColumn({ title, problemsList, status, disableClick, disableColor }) {
   const navigate = useNavigate();
 
+  const columnStyle = disableColor
+    ? { backgroundColor: "#e0e0e0", pointerEvents: "none" }
+    : {};
+
+  const titleStyle = disableColor
+    ? { color: "#6b7280", borderBottom: "2px solid #d1d5db" } // gray text and border
+    : status === "SOS"
+    ? { color: "red", borderBottom: "2px solid #d51a1a" }
+    : { color: "#405da9", borderBottom: "2px solid #e2e8f0" }; // blue default
+
   return (
-    <div className="report-column">
-      <h3 className="column-title">{title}</h3>
-      <div className="column-items">
-        {problemsList.length === 0 && <p className="empty-text">No issues reported</p>}
-        {problemsList.map((p) => (
+    <div className="report-column" style={columnStyle}>
+      <div className="column-title" style={titleStyle}>
+        {title}
+      </div>
+      {problemsList.length === 0 ? (
+        <div className="empty-text">No issues reported</div>
+      ) : (
+        problemsList.map((p) => (
           <div
             key={p.id}
-            className="problem-card clickable"
-            onClick={() => navigate(`/pothole/${p.id}`)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === "Enter" && navigate(`/pothole/${p.id}`)}
+            className="problem-card"
+            onClick={() => !disableClick && navigate(`/report/${p.id}`)}
+            style={{
+              cursor: disableClick ? "default" : "pointer",
+              userSelect: disableClick ? "none" : "auto",
+            }}
           >
-            <strong>{p.id}</strong> - {p.title}
+            <div className="problem-id-title">{p.id}: {p.title}</div>
+            <div className="problem-desc">
+              <strong>Status:</strong> {p.status}<br />
+              <strong>Location:</strong> {p.location}
+            </div>
           </div>
-        ))}
-      </div>
+        ))
+      )}
     </div>
   );
 }
 
-const ReportPage = () => {
-  const [departmentFilter, setDepartmentFilter] = useState("All");
-  const [statusFilter, setStatusFilter] = useState("All");
 
-  const filteredProblems = useMemo(() => {
-    return problems.filter(
-      (p) =>
-        (departmentFilter === "All" || p.dept === departmentFilter) &&
-        (statusFilter === "All" || p.status === statusFilter)
-    );
-  }, [departmentFilter, statusFilter]);
+export default function ReportsPage() {
+  const [showSOS, setShowSOS] = useState(false);
+  const [problems, setProblems] = useState(initialProblems);
+  const timersRef = React.useRef([]);
 
-  const reportedProblems = filteredProblems.filter((p) => p.status === "Reported");
-  const inProgressProblems = filteredProblems.filter((p) => p.status === "In Progress");
-  const resolvedProblems = filteredProblems.filter((p) => p.status === "Resolved");
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setProblems((prevProblems) => [
+        ...prevProblems,
+        {
+          id: "ELO-2025-NEW",
+          title: "Streetlight Broken",
+          dept: "Electrical",
+          status: "Reported",
+          location: "Rourkela",
+        },
+      ]);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  const mapCenter =
-    filteredProblems.length === 0
-      ? [20.9517, 85.0985]
-      : cityCoordinates[filteredProblems[0].location] || [20.9517, 85.0985];
+  useEffect(() => {
+    timersRef.current.forEach((t) => clearTimeout(t));
+    timersRef.current = [];
+
+    if (showSOS) {
+      const timer1 = setTimeout(() => {
+        setProblems((prev) => {
+          if (prev.some((p) => p.id === "SOS-NEW-001")) return prev;
+          return [
+            ...prev,
+            {
+              id: "SOS-NEW-001",
+              title: "Dam Breach",
+              dept: "Disaster",
+              status: "SOS",
+              location: "Cuttack",
+            },
+          ];
+        });
+      }, 5000);
+
+      const timer2 = setTimeout(() => {
+        setProblems((prev) => {
+          if (prev.some((p) => p.id === "SOS-NEW-002")) return prev;
+          return [
+            ...prev,
+            {
+              id: "SOS-NEW-002",
+              title: "Bridge Collapse",
+              dept: "Disaster",
+              status: "SOS",
+              location: "Sundargarh",
+            },
+          ];
+        });
+      }, 6500);
+
+      timersRef.current.push(timer1, timer2);
+    }
+
+    return () => {
+      timersRef.current.forEach((t) => clearTimeout(t));
+      timersRef.current = [];
+    };
+  }, [showSOS]);
+
+  const reportedProblems = useMemo(() => problems.filter((p) => p.status === "Reported"), [problems]);
+  const inProgressProblems = useMemo(() => problems.filter((p) => p.status === "In Progress"), [problems]);
+  const resolvedProblems = useMemo(() => problems.filter((p) => p.status === "Resolved"), [problems]);
+  const sosProblems = useMemo(() => problems.filter((p) => p.status === "SOS"), [problems]);
 
   return (
     <div className="page-container">
-      <main className="content">
+      <div className="content">
         <h2>Problem Reports</h2>
-        <div className="filters">
-          <label>
-            Status:
-            <select value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
-              <option value="All">All</option>
-              <option value="Reported">Reported</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Resolved">Resolved</option>
-            </select>
-          </label>
+        <div style={{ display: "flex", gap: 16, marginBottom: 24 }}>
+          <button
+            className="see-details-link"
+            style={{ backgroundColor: "#405da9" }}
+            onClick={() => setShowSOS(false)}
+            disabled={!showSOS}
+          >
+            Hide Disaster
+          </button>
+          <button
+            className="see-details-link"
+            style={{ backgroundColor: "#d51a1a" }}
+            onClick={() => setShowSOS(true)}
+            disabled={showSOS}
+          >
+            Disaster
+          </button>
         </div>
         <div className="map-container">
-          <MapContainer center={mapCenter} zoom={7.2} scrollWheelZoom={false} style={{ height: "300px", width: "100%" }}>
+          <MapContainer
+            center={cityCoordinates.Bhubaneswar}
+            zoom={7}
+            style={{ height: "100%", width: "100%" }}
+          >
             <TileLayer
-              attribution='Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
             />
-            {filteredProblems.map((p) => (
-              <Marker key={p.id} position={cityCoordinates[p.location]} icon={customMarker(p.status)}>
-                <Popup>
-                  <b>{p.title}</b>
-                  <br />
-                  <b>Status:</b> {p.status}
-                  <br />
-                  <b>Location:</b> {p.location}
-                </Popup>
-              </Marker>
-            ))}
+            {problems.map(
+              (p) =>
+                cityCoordinates[p.location] && (
+                  <Marker
+                    key={p.id}
+                    position={cityCoordinates[p.location]}
+                    icon={customMarker(p.status)}
+                  >
+                    <Popup>
+                      <strong>{p.title}</strong>
+                      <br />
+                      Status:{" "}
+                      <span style={{ color: statusColors[p.status] }}>
+                        {p.status}
+                      </span>
+                      <br />
+                      Location: {p.location}
+                    </Popup>
+                  </Marker>
+                )
+            )}
           </MapContainer>
         </div>
-        <div className="columns-container">
-          <StatusColumn title="Reported" problemsList={reportedProblems} />
-          <StatusColumn title="In Progress" problemsList={inProgressProblems} />
-          <StatusColumn title="Resolved" problemsList={resolvedProblems} />
+        <div
+          className="columns-container"
+          style={
+            showSOS
+              ? { gridTemplateColumns: "repeat(4, 1fr)" }
+              : { gridTemplateColumns: "repeat(3, 1fr)" }
+          }
+        >
+          {/* Disable clicking + gray color for other columns when SOS active */}
+          <StatusColumn
+            title="Reported"
+            problemsList={reportedProblems}
+            status="Reported"
+            disableClick={showSOS}
+            disableColor={showSOS}
+          />
+          <StatusColumn
+            title="In Progress"
+            problemsList={inProgressProblems}
+            status="In Progress"
+            disableClick={showSOS}
+            disableColor={showSOS}
+          />
+          <StatusColumn
+            title="Resolved"
+            problemsList={resolvedProblems}
+            status="Resolved"
+            disableClick={showSOS}
+            disableColor={showSOS}
+          />
+          {showSOS && (
+            <StatusColumn
+              title="SOS"
+              problemsList={sosProblems}
+              status="SOS"
+              // SOS column stays enabled with normal color
+              disableClick={false}
+              disableColor={false}
+            />
+          )}
         </div>
-      </main>
+      </div>
     </div>
   );
-};
-
-export default ReportPage;
+}
