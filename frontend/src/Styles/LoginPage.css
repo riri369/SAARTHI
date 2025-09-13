@@ -1,0 +1,121 @@
+/* Styles/LoginPage.css */
+.login-bg {
+  min-height: 100vh;
+  background-image: linear-gradient(#050e55, #2c3ec8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-card {
+  background: whitesmoke;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(4, 18, 108, 0);
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 370px;
+  transition: box-shadow 0.3s;
+}
+.login-card:hover {
+  box-shadow: 0 8px 40px rgba(123, 123, 152, 0.375);
+}
+.login-form input {
+  padding: 0.6rem;
+  border: 1px solid #050e55;
+  outline: none;
+}
+.login-button {
+  padding: 11px 0;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.2s;
+}
+.login-form button {
+  padding: 0.7rem;
+  background-color: #050e55;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login-form button:hover {
+  background-color: #0d52a1;
+  color: #ffffff;
+
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  color: #050e55;
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.login-form-header {
+  margin-bottom: 22px;
+}
+
+.login-heading {
+  font-size: 1rem;
+  font-weight: 5000;
+  font-family:'Times New Roman', Times, serif;
+  color: #0c3059;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.login-subtext {
+  font-size: 0.97rem;
+  color: #050e55;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-label {
+  font-size: 1rem;
+  color: #050e55;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.login-input {
+  padding: 10px 12px;
+  border: 1px solid #0b2237;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f7fafd;
+  color: #050e55;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-input:focus {
+  border-color: #062783;
+  background: #eef3fa;
+}
+
+.error-message {
+  color: #aa0a0a;
+  background: #ffffff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  font-size: 0.98rem;
+  text-align: center;
+}
