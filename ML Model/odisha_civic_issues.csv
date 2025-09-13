@@ -1,0 +1,501 @@
+location,description,issue_type,urgency
+Bhubaneswar,Large pothole on main road near PREMIER Mall causing traffic slowdowns,pothole,high
+Cuttack,Streetlight not functioning on Station Road corner,streetlight,medium
+Rourkela,Garbage accumulation near Uditnagar market,garbage,low
+Berhampur,Water supply disruption in Berhampur Town Ward 15,water,high
+Sambalpur,Potholed stretch on NH six near Bargarh belt,pothole,high
+Puri,Streetlight out on near Jagannath temple complex,streetlight,high
+Balasore,Garbage dumping outside ward office causing smell,garbage,medium
+Baripada,Water supply flow inconsistent during peak hours,water,medium
+Jharsuguda,Pothole near bus stop obstructing pedestrian path,pothole,low
+Angul,Streetlight flickering in constructing area near mayor office,streetlight,low
+Dhenkanal,Garbage collected late from ward 12 streets,garbage,low
+Kendrapara,Water supply intermittent in coastal town,water,medium
+Bargarh,Pothole on main road near market square,pothole,medium
+Jeypore,Streetlight outage along NH 43 corridor,streetlight,high
+Bhadrak,Overflowing garbage bins in residential area,garbage,high
+Rayagada,Water supply resumes after power cut,water,low
+Paradeep,Litter near port area affecting cleanliness,garbage,low
+Koraput,Pothole damages two-wheelers near market area,pothole,medium
+Sundargarh,Streetlight out on main road near t-junction,streetlight,medium
+Phulbani,Water tank leak in central square causing wet roads,water,high
+Bhubaneswar,pothole on main road near Market Square causing traffic slowdown,pothole,high
+Cuttack,streetlight not working on ITI Road leading to dark intersections,streetlight,medium
+Rourkela,"garbage piling up in the nullah behind Sector-5, smells rising",garbage,high
+Berhampur,"water supply disrupted in ward 12, intermittent pressure",water,high
+Sambalpur,pothole near bus stand causing bumper to bumper traffic,pothole,medium
+Puri,streetlight flickering in coastal road causing visibility issues at night,streetlight,low
+Balasore,garbage not collected in ward 4 since last two days,garbage,medium
+Baripada,water supply inconsistent in the city due to pump failure,water,high
+Jharsuguda,pothole on city ring road near temple,pothole,low
+Angul,streetlight not working near civic body office,streetlight,high
+Dhenkanal,garbage dumping near market causing foul odor,garbage,low
+Kendrapara,water supply line leaking in housing colony,water,medium
+Bargarh,pothole on highway approaching town center,pothole,high
+Jeypore,streetlight outage near hospital complex,streetlight,medium
+Bhadrak,garbage accumulation in riverfront area,garbage,high
+Rayagada,water supply interrupted during evening hours,water,high
+Paradeep,pothole on coastal road near port area,pothole,medium
+Koraput,streetlight damaged near government school,streetlight,low
+Sundargarh,garbage bin overflowed at market square,garbage,medium
+Phulbani,water tank leaking in municipal building,water,low
+Bhubaneswar,large pothole on main road near VIP road,pothole,high
+Cuttack,streetlight not working at city square,streetlight,medium
+Rourkela,garbage piling up at market area,garbage,high
+Berhampur,water supply disrupted in ward 12,water,high
+Sambalpur,blocked drain causing minor flooding,garbage,low
+Puri,pothole after monsoon near signaling,pothole,medium
+Balasore,streetlight flickering during night,streetlight,low
+Baripada,garbage not collected in ward 3,garbage,medium
+Jharsuguda,water supply irregularities in colony,water,high
+Angul,pothole on highway near substation,pothole,low
+Dhenkanal,streetlight outage near market complex,streetlight,high
+Kendrapara,garbage dump not cleared for days,garbage,high
+Bargarh,drainage clog causing waterlogging,water,medium
+Jeypore,pothole near school entrance,pothole,low
+Bhadrak,streetlight not turning on in night,streetlight,medium
+Rayagada,garbage scattered at bus stand,garbage,high
+Paradeep,water supply low pressure in coastal area,water,low
+Koraput,pothole on steep road near bridge,pothole,medium
+Sundargarh,streetlight out on main boulevard,streetlight,high
+Phulbani,garbage pile near market street,garbage,low
+Bhubaneswar,Large pothole on main road near master plan intersection,pothole,high
+Cuttack,Streetlight not working at central circle causing poor visibility at night,streetlight,medium
+Rourkela,Garbage not collected for two days around residential colony,garbage,high
+Berhampur,"Water supply disruption in ward 12, residents report low pressure",water,high
+Sambalpur,"Pothole damaged road near market, hindering traffic",pothole,medium
+Puri,Streetlight along beach promenade not turning on after sunset,streetlight,low
+Balasore,"Garbage piling up in lane behind hotel, attracting flies",garbage,high
+Baripada,Water supply inconsistent during early morning hours,water,medium
+Jharsuguda,Pothole near railway crossing causing vehicle damage,pothole,high
+Angul,Streetlight in neighborhood park not functioning,streetlight,low
+Dhenkanal,Garbage collected late in market area; sanitation concern,garbage,medium
+Kendrapara,Water supply returning after intermittent outages,water,low
+Bargarh,Pothole on state highway creating rough ride,pothole,medium
+Jeypore,Streetlight not visible due to faulty pole wiring,streetlight,high
+Bhadrak,Stagnant water in low-lying area after rains,water,low
+Rayagada,Overflowing garbage bins near bus stand,garbage,medium
+Paradeep,Pothole with broken asphalt causing noise at night,pothole,high
+Koraput,Streetlight near government building flickering intermittently,streetlight,medium
+Sundargarh,Water supply contamination smell near quarry area,water,high
+Phulbani,Garbage truck delays causing litter in market square,garbage,low
+Bhubaneswar,Large pothole on MG Road causing traffic slowdown,pothole,high
+Cuttack,Streetlight not working near Nava Kaali temple,streetlight,medium
+Rourkela,Garbage piling up beside local market,garbage,high
+Berhampur,Water supply disrupted in ward 12,water,high
+Sambalpur,Pothole repairs pending near hospital,pothole,medium
+Puri,Streetlight flickering in stadium road,streetlight,low
+Balasore,Garbage dumping in open space behind school,garbage,medium
+Baripada,Water leakage from main line near market,water,high
+Jharsuguda,Pothole causing road damage on NH-6 bypass,pothole,high
+Angul,Streetlight near ward office not functioning,streetlight,low
+Dhenkanal,Garbage not collected in colony 5,garbage,low
+Kendrapara,Water supply irregular in coastal area,water,medium
+Bargarh,Pothole on outskirts road near temple,pothole,low
+Jeypore,Streetlight out on main market lane,streetlight,medium
+Bhadrak,Garbage in open drainage channel,garbage,high
+Rayagada,Water source smell near jail road,water,low
+Paradeep,Pothole near port road causing delays,pothole,medium
+Koraput,Streetlight not lighting at hill station lane,streetlight,high
+Sundargarh,Garbage littered along highway shoulder,garbage,medium
+Phulbani,Water supply restored after outage in town center,water,low
+Bhubaneswar,large pothole on the central boulevard causing traffic disruption,pothole,high
+Cuttack,streetlight not working near railway crossing,streetlight,medium
+Puri,garbage not collected in the market area for two days,garbage,high
+Sambalpur,water supply disruption in several housing colonies,water,high
+Berhampur,pothole on main road near bus stop,pothole,medium
+Rourkela,streetlight flickering late at night along ring road,streetlight,low
+Balasore,garbage piled up near market due to truck delay,garbage,medium
+Baripada,drinking water supply irregular in new colony,water,low
+Jharsuguda,potholed road leading to industrial area,pothole,high
+Angul,non-functional streetlight near school,streetlight,high
+Dhenkanal,garbage collection delays in ward 12,garbage,low
+Kendrapara,water supply smell and low pressure in several blocks,water,medium
+Bargarh,pothole near hospital entrance causing bikes to swerve,pothole,high
+Jeypore,streetlight not turning on in public park,streetlight,low
+Bhadrak,garbage truck blocked due to traffic jam,garbage,medium
+Rayagada,water supply off for municipal residents,water,high
+Paradeep,pothole on coastal road near fish market,pothole,low
+Koraput,streetlight outage in hillside colony,streetlight,medium
+Sundargarh,garbage accumulation along riverfront,garbage,high
+Phulbani,water leakage from main line near market square,water,high
+Bhubaneswar,"Pothole on NH5 near Khandagiri, deep and causing detour",pothole,high
+Cuttack,Streetlight not working in Buxi Bazar area after dusk,streetlight,medium
+Rourkela,"Garbage accumulation in old market square, smells around",garbage,high
+Berhampur,Water supply disruption in Dasapara colony,water,low
+Sambalpur,"Pothole on main road near Gandhi Chowk, dangerous for two-wheelers",pothole,high
+Puri,Streetlight outage around Jagannath temple area,streetlight,high
+Balasore,Overflowing garbage bins at Station Road junction,garbage,medium
+Baripada,Water supply intermittent in Sabalpuri,water,medium
+Jharsuguda,Pothole near crossing at Talapali causing jerks,pothole,low
+Angul,Streetlight not working in Jalpada mohalla,streetlight,low
+Dhenkanal,Waste collection delays in town center,garbage,medium
+Kendrapara,"Flooded underpass after rain, water logging",water,high
+Bargarh,Pothole on state highway near Badgaon,pothole,medium
+Jeypore,Streetlight flickering in market area,streetlight,low
+Bhadrak,Garbage not collected for two days in Anganwadi area,garbage,high
+Rayagada,Water supply cut due to pipeline leak in town,water,high
+Paradeep,Pothole near fish market creating traffic jams,pothole,medium
+Koraput,Streetlight not functioning around government hospital,streetlight,medium
+Sundargarh,Overflowing garbage near Shaktinagar colony,garbage,low
+Phulbani,Water pipeline leak near market square,water,low
+Bhubaneswar,large pothole on main road near Secretariat,pothole,high
+Cuttack,streetlight not working near Market Square,streetlight,medium
+Puri,garbage piled up at temple approach,garbage,high
+Paradeep,water supply disruption in coastal colony,water,low
+Sambalpur,broken streetlight on main road near Sadar,streetlight,low
+Rourkela,pothole causing traffic slowdown near Civil Township,pothole,high
+Balasore,garbage collection irregular in ward 12,garbage,medium
+Kendrapara,water pipe leak leading to wet road surface,water,medium
+Baripada,non-functional streetlight near bus stand,streetlight,high
+Angul,pothole near market area causing bike tires     ,pothole,medium
+Dhenkanal,garbage overflowing near hospital boundary,garbage,high
+Kendujhar,water supply fault in midtown apartments,water,low
+Jagatsinghpur,streetlight not functioning at health center lane,streetlight,medium
+Ganjam,pothole near new market causing jams,pothole,high
+Malkangiri,garbage not collected in Naxal area,garbage,low
+Sundargarh,water supply intermittently available in colony side,water,medium
+Nayagarh,streetlight flickers on rainy nights,streetlight,low
+Kalahandi,pothole near high school causing detours,pothole,medium
+Mayurbhanj,garbage bags torn by stray animals in park lane,garbage,low
+Deogarh,water tank not filling in new colony,water,high
+Bhubaneswar,Large pothole on main road near Railway Station.,pothole,high
+Cuttack,Streetlight not functioning on Pchanati Road.,streetlight,medium
+Rourkela,Garbage bin overflowing near Civil Township.,garbage,high
+Berhampur,Water supply disruption in ward 12.,water,high
+Sambalpur,Potholed lane causing slow traffic near Hospital.,pothole,medium
+Puri,Streetlight flickers late at night along Sea Beach Road.,streetlight,low
+Balasore,Garbage collection delayed in Kanchrapara area.,garbage,medium
+Baripada,Water pressure low in municipal supply.,water,low
+Jharsuguda,Pothole on NH-49 affecting two lanes.,pothole,high
+Angul,Streetlight out near Angul Stadium.,streetlight,medium
+Dhenkanal,Overflowing drain causing street flooding.,garbage,low
+Kendrapara,Water supply intermittent for two days.,water,medium
+Bargarh,Pothole near market block residents complain of noises.,pothole,low
+Jeypore,Streetlight not bright enough on main road.,streetlight,low
+Bhadrak,Garbage piled up behind police lines.,garbage,high
+Rayagada,Water leakage from main supply near market.,water,medium
+Paradeep,Pothole at entry to oil terminal road.,pothole,high
+Koraput,Streetlight out in residential colony 5th Block.,streetlight,medium
+Sundargarh,Garbage not collected in tribal colony area.,garbage,low
+Phulbani,Water supply restored after outage in town center.,water,high
+Bhubaneswar,Large pothole on main arterial road causing slow traffic,pothole,high
+Cuttack,Streetlight not working near Mahanadi bridge,streetlight,medium
+Rourkela,Garbage piling up near market area,garbage,high
+Berhampur,Water supply disrupted in several colonies,water,high
+Sambalpur,Potholed road leading to hospital entrance,pothole,medium
+Puri,Streetlight outage near railway station,streetlight,low
+Balasore,Overflowing garbage bins in market area,garbage,medium
+Baripada,Water supply intermittent in several wards,water,high
+Jharsuguda,Road crater on bypass causing bikes to weave,pothole,high
+Angul,Streetlight flickering early evenings,streetlight,low
+Dhenkanal,Garbage collection delayed in ward 12,garbage,low
+Kendrapara,Water leakage from main pipeline near school,water,medium
+Bargarh,Pothole filled with muddy water after rain,pothole,medium
+Jeypore,Streetlight on secondary road not functioning,streetlight,low
+Bhadrak,Garbage bags dumped near temple premises,garbage,medium
+Rayagada,Water supply cutoff due to maintenance work,water,high
+Paradeep,Pothole near fish market causing traffic slowdown,pothole,medium
+Koraput,Streetlight not turning on at main square,streetlight,high
+Sundargarh,Overflowing garbage containers in residential area,garbage,high
+Phulbani,Water tankers delivering late at night,water,low
+Bhubaneswar,large pothole on main road causing traffic slowdown,pothole,high
+Cuttack,streetlight not working near central square,streetlight,medium
+Rourkela,garbage bins overflowing in market area,garbage,high
+Berhampur,flickering streetlights along main road,streetlight,low
+Sambalpur,uncollected waste near residential lanes,garbage,medium
+Puri,water supply disrupted in several blocks,water,high
+Balasore,pothole hole expanding after heavy rain,pothole,high
+Baripada,streetlight broken near bus stand,streetlight,medium
+Jharsuguda,garbage not collected in ward 5,garbage,low
+Angul,water leakage in public park area,water,medium
+Dhenkanal,pothole on highway causing slow traffic,pothole,medium
+Kendrapara,streetlight outage near market street,streetlight,high
+Bargarh,garbage bins missing in several lanes,garbage,low
+Jeypore,water supply intermittent in colony,water,low
+Bhadrak,pothole near school causing detour,pothole,medium
+Rayagada,streetlight not aligning with footpath,streetlight,low
+Paradeep,garbage piling up along the harbour side,garbage,high
+Koraput,water supply partially restored but inconsistent,water,medium
+Sundargarh,unsealed manhole on peripheral road,others,high
+Phulbani,noise and litter from festival cleanup delay,others,low
+Bhubaneswar,large pothole on main road near city center,pothole,high
+Cuttack,streetlight not working near market,streetlight,medium
+Rourkela,garbage not collected in ward 12,garbage,low
+Berhampur,drainage blocked causing water stagnation,water,high
+Sambalpur,pothole near bus stand; traffic obstructed,pothole,medium
+Puri,streetlight flickering late night,streetlight,low
+Balasore,garbage dumping at empty plot,garbage,medium
+Baripada,water supply irregular in sadar area,water,high
+Jharsuguda,pothole causing bicycle accidents on road 3,pothole,high
+Angul,streetlight out at main intersection,streetlight,medium
+Dhenkanal,garbage piling up in colony 4,garbage,low
+Kendrapara,water supply disruption in coastal belt,water,high
+Bargarh,pothole near hospital entrance,pothole,low
+Jeypore,streetlight not turning on in market square,streetlight,high
+Bhadrak,garbage collection delay in ward 6,garbage,medium
+Rayagada,irregular water supply in tribal belt,water,medium
+Paradeep,pothole on highway near port,pothole,high
+Koraput,streetlight outage in educational campus area,streetlight,low
+Sundargarh,garbage dumped along roadside,garbage,low
+Phulbani,water leak on main road near police station,water,high
+Bhubaneswar,Large pothole on main arterial road causing traffic jams,pothole,high
+Cuttack,Streetlight not working near intersection due to blown fuse,streetlight,medium
+Rourkela,Garbage piling up near market area with foul smell,garbage,high
+Berhampur,Water supply disrupted in several colonies,water,high
+Sambalpur,Pothole hazard on ring road after rain,pothole,medium
+Puri,Streetlight flickering intermittently along temple corridor,streetlight,low
+Balasore,Garbage bins overflowing near bus stand,garbage,medium
+Baripada,Water tap not functioning in public park,water,low
+Jharsuguda,Pothole at crossroad causing vehicle damage,pothole,high
+Angul,Streetlight outage on main highway near fuel station,streetlight,high
+Dhenkanal,Garbage pickup delayed in residential sector,garbage,medium
+Kendrapara,Water supply irregular in several blocks,water,medium
+Bargarh,Pothole fill needed on district road,pothole,low
+Jeypore,Streetlight out near hospital entrance,streetlight,high
+Bhadrak,Garbage not collected from ward without notice,garbage,high
+Rayagada,Water tank empty in municipal supply lines,water,medium
+Paradeep,Pothole on coastal road creating pothole risk,pothole,low
+Koraput, Streetlight not functioning near bus stop (electrical fault),streetlight,medium
+Sundargarh,Garbage trucks delayed; bins overflowing in market area,garbage,medium
+Phulbani,Water leakage from main pipe damaging road surface,water,high
+Bhubaneswar,large pothole on main road near Junction Mall,pothole,high
+Cuttack,streetlight not working at Nabina Square,streetlight,medium
+Rourkela,garbage not collected in Sector-5 for two days,garbage,low
+Berhampur,water supply disrupted in Ward 12,water,high
+Sambalpur,pothole near main market causing traffic jam,pothole,high
+Puri,streetlight flickering at temple road,streetlight,low
+Balasore,garbage littering on beach promenade,garbage,medium
+Baripada,water supply intermittent in residential area,water,medium
+Jharsuguda,pothole on ring road near hospital,pothole,high
+Angul,streetlight out in new township,streetlight,medium
+Dhenkanal,garbage bins overflowing at market complex,garbage,high
+Kendrapara,water supply contamination reported,water,low
+Bargarh,pothole on highway passing through town,pothole,medium
+Jeypore,streetlight not working near school,streetlight,high
+Bhadrak,garbage collection delayed in coastal ward,garbage,low
+Rayagada,water supply再stered in hill town,water,high
+Paradeep,pothole near power substation,pothole,low
+Koraput,streetlight on tribal route not functioning,streetlight,medium
+Sundargarh,garbage compactors full in town center,garbage,high
+Phulbani,water leakage from main pipe in colony,water,medium
+Bhubaneswar,Large pothole on main road near market square causing traffic jams,pothole,high
+Cuttack,Streetlight not working at junction leading to dark streets at night,streetlight,medium
+Rourkela,Garbage piling up near municipal katcheri after collection time,garbage,high
+Berhampur,Water supply disruption in several colonies due to pipeline leak,water,high
+Sambalpur,Potholes on outer ring road causing bike tire damage,pothole,medium
+Puri,Streetlight in coastal road area flickering during late evenings,streetlight,low
+Balasore,Garbage bins overflowing at market square,garbage,medium
+Baripada,Water supply irregular in residential belts,water,medium
+Jharsuguda,Pothole on highway near railway overbridge,pothole,high
+Angul,Streetlight outage in new housing colony,streetlight,high
+Dhenkanal,Garbage pickup not happening on Sundays in ward 5,garbage,low
+Kendrapara,"Stagnant water on road after rain, risk of mosquitoes",water,medium
+Bargarh,Streetlight out near temple complex,streetlight,low
+Jeypore,Garbage scattered along roadside due to broken bins,garbage,high
+Bhadrak,Pothole at crossroad causing traffic bottlenecks,pothole,medium
+Rayagada,Water supply pipe leak near government hospital,water,high
+Paradeep,Streetlight not turning on in port area after sunset,streetlight,medium
+Koraput,Garbage dump near school needs removal,garbage,low
+Sundargarh,Pothole on bypass road near steel plant,pothole,high
+Phulbani,Water line break in municipal colony causing low pressure,water,medium
+Bhubaneswar,Large pothole on main road near Lingaraj Temple causing traffic slowdown,pothole,high
+Cuttack,Streetlight not working in front of Panipuri market causing dark area at night,streetlight,medium
+Puri,Garbage piled up near railway station due to irregular collection,garbage,low
+Bargarh,"Water supply disrupted in ward 12, estimated restoration by evening",water,medium
+Baripada,Streetlight flickering intermittently on Main Street,streetlight,low
+Sambalpur,Pothole on NH53 causing vehicle damage to two-wheelers,pothole,high
+Angul,Garbage heap near civic body office not cleared for three days,garbage,medium
+Balasore,Water leak near New Market causing wet road and traffic congestion,water,high
+Kendrapara,Pothole at crossroad causing bike skid risk,pothole,medium
+Cuttack,Trash bins overflowing in Market Chhak leading to litter on streets,garbage,high
+Rourkela,Stagnant water after rain near APIIC road; potential mosquito breeding,water,low
+Berhampur,Broken streetlight in front of railway overbridge,streetlight,medium
+Paradeep,Pothole on the coastal road causing slow traffic,pothole,low
+Jeypore,Water supply intermittent in several colonies,water,medium
+Ganjam,Garbage not collected in ward 7 after festival crowds,garbage,high
+Mayurbhanj,Streetlight outage near hospital; safety concern at night,streetlight,high
+Dhenkanal,Pothole near bus stand causing traffic bottleneck,pothole,medium
+Kendujhar,Water supply rationing during peak hours leading to shortages,water,low
+Jagatsinghpur,Overflowing garbage bins near school ground,garbage,medium
+Sundargarh,Streets flooded after heavy rain; drainage blockages,water,high
+Bhubaneswar,pothole on Whitefield Road causing traffic slowdown,pothole,high
+Cuttack,streetlight not working near City Centre at night,streetlight,medium
+Rourkela,garbage piling up in ward 12 near market area,garbage,high
+Berhampur,water supply disruption in old town,water,high
+Sambalpur,pothole on circular road near college bus stop,pothole,medium
+Puri,streetlight flickering and going off intermittently,streetlight,low
+Balasore,garbage bins overflowing in residential area,garbage,medium
+Baripada,drinking water pressure low in new colony,water,medium
+Jharsuguda,pothole causing vehicle damage near power substation,pothole,high
+Angul,streetlight not functioning on main road near temple,streetlight,high
+Dhenkanal,garbage pickup delayed in municipal ward,garbage,low
+Kendrapara,water supply contamination reported in coastal area,water,high
+Bargarh,pothole near market square obstructing traffic,pothole,medium
+Jeypore,streetlight outage in hillside locality,streetlight,low
+Bhadrak,garbage collection missed for two days in a row,garbage,low
+Rayagada,water pressure drops during peak hours,water,medium
+Paradeep,pothole near harbour road causing bicycle skid,pothole,high
+Koraput,streetlight outage in tribal colony,streetlight,medium
+Sundargarh,garbage disposal site not maintained,garbage,high
+Phulbani,water tank leak near hospital entrance,water,high
+Bhubaneswar,Pothole on major artery causing traffic disruption,pothole,high
+Cuttack,Streetlight not working near market square,streetlight,medium
+Puri,Garbage piling up near temple complex,garbage,high
+Bargarh,Water supply disruption in several blocks,water,high
+Sambalpur,Pothole on ring road near bus depot,pothole,medium
+Berhampur,Streetlight flickers and goes off at night,streetlight,low
+Angul,Garbage not collected from park area,garbage,low
+Rourkela,Water pressure drop in residential lanes,water,medium
+Cuttack,Pothole near school causing bicycle accidents,pothole,high
+Ganjam,Streetlight not functional in colony,streetlight,medium
+Puri,Overflowing garbage bins in market area,garbage,high
+Mayurbhanj,Water supply cut for several hours in residential blocks,water,high
+Kendrapara,Pothole on coastal road affecting commuters,pothole,medium
+Dhenkanal,Streetlight outage near hospital complex,streetlight,low
+Balasore,Garbage littering along canal bank,garbage,medium
+Sundargarh,Water supply inconsistent in new housing colony,water,low
+Nayagarh,Pothole damages two-wheeler tires,pothole,high
+Kendujhar,Streetlight not turning on in evening,streetlight,medium
+Jagatsinghpur,Garbage unattended in public park,garbage,low
+Ganjam,Water leakage from main pipeline near colony,water,high
+Bhubaneswar,Large pothole on main road near LIC building causing traffic delays,pothole,high
+Cuttack,Streetlight not functioning near Commissionerate Office,streetlight,medium
+Puri,Garbage accumulation along the beach promenade,garbage,high
+Rourkela,Water supply disruption in residential colonies,water,high
+Berhampur,Pothole on ring road causing vehicle vibrations,pothole,medium
+Sambalpur,"Streetlight not blinking, intermittent outage",streetlight,low
+Balasore,Garbage bins overflowing in market area,garbage,medium
+Baripada,Water supply pipeline leak near railway station,water,high
+Jharsuguda,Pothole developing on state highway near city limits,pothole,low
+Angul,Streetlight flickers during late evenings,streetlight,low
+Dhenkanal,Garbage collection delayed in ward 12,garbage,medium
+Kendrapara,Water supply intermittent in coastal town,water,high
+Bargarh,Pothole near bus stand causing jerky rides,pothole,high
+Jeypore,Streetlight not working at main crossroad,streetlight,medium
+Bhadrak,Garbage piling up outside hospital premises,garbage,low
+Rayagada,Water supply restored after long outage,water,low
+Paradeep,Pothole on harbor road near fish market,pothole,medium
+Koraput,Streetlight outage in hillside locality,streetlight,high
+Sundargarh,Garbage not collected for two days in town center,garbage,high
+Phulbani,Water pipeline leak under market street,water,medium
+Bhubaneswar,large pothole on main arterial road causing traffic delays,pothole,high
+Cuttack,streetlight not functioning near market square,streetlight,medium
+Rourkela,garbage needs pickup near residential colony,garbage,low
+Berhampur,water supply disrupted in ward 12,water,high
+Sambalpur,pothole on bridge causing slow traffic,pothole,medium
+Puri,streetlight flickering but sometimes stays off,streetlight,low
+Balasore,garbage bins overflowing near bus stop,garbage,high
+Baripada,water supply irregular in slum area,water,medium
+Jharsuguda,pothole at junction causing bike accidents,pothole,high
+Angul,streetlight outage in industrial area,streetlight,medium
+Dhenkanal,garbage pickup delayed in market area,garbage,low
+Kendrapara,water line leak near riverbank,water,high
+Bargarh,pothole in outer ring road causing traffic jams,pothole,medium
+Jeypore,streetlight out in residential colony,streetlight,low
+Bhadrak,garbage not collected in evening shift,garbage,medium
+Rayagada,water supply intermittent during evening,water,low
+Paradeep,pothole near port road affecting trucks,pothole,high
+Koraput,streetlight in hillside colony not working,streetlight,medium
+Sundargarh,garbage piling up near the market square,garbage,high
+Phulbani,water supply restored but pressure low,water,low
+Bhubaneswar,large pothole on main road causing traffic slowdowns,pothole,high
+Cuttack,streetlight not working on ring road after dusk,streetlight,medium
+Rourkela,garbage dump not cleared in a congested lane,garbage,low
+Berhampur,water supply disrupted in several neighborhoods,water,high
+Sambalpur,public park littered with plastic waste,garbage,medium
+Puri,pothole near temple junction causing traffic build-up,pothole,high
+Balasore,streetlight fuse blown leading to dark streets at night,streetlight,low
+Baripada,drinking water line leakage in residential area,water,medium
+Jharsuguda,garbage not collected in market area,garbage,high
+Angul,water shortage during afternoon peak hours,water,low
+Dhenkanal,pothole causing road damage near school,pothole,medium
+Kendrapara,streetlight not lighting in main thoroughfare,streetlight,high
+Bargarh,garbage pile-up behind market complex,garbage,medium
+Jeypore,water supply slow and irregular in ward 5,water,low
+Bhadrak,pothole near bus stand obstructing traffic,pothole,high
+Rayagada,streetlight outage affecting residential lanes,streetlight,medium
+Paradeep,garbage collection irregular in coastal area,garbage,low
+Koraput,water contamination alert near public tap,water,high
+Sundargarh,pothole repairs pending on highway stretch,pothole,medium
+Phulbani,streetlight flickering during monsoon,streetlight,low
+Bhubaneswar,Large pothole on main artery near Rotary Circle causing traffic slowdowns,pothole,high
+Cuttack,Streetlight not working on Jessore Road leading to poor visibility at night,streetlight,medium
+Puri,Garbage bins overflowing near the temple complex,garbage,high
+Rourkela,Water supply disruption in sector 5 due to broken main pipe,water,high
+Berhampur,"Road sinkhole developing after recent rain, needs urgent repair",pothole,high
+Sambalpur,Dusty street with litter near market square; request for regular cleanup,garbage,low
+Puri,"Streetlight flickering on LT Road, intermittently dark",streetlight,low
+Balasore,Municipal water supply intermittent during evenings,water,medium
+Jeypore,Pothole near hospital entrance causing vehicle damage,pothole,medium
+Kendrapara,Garbage collection delay in ward 4 leading to foul smell,garbage,high
+Mayurbhanj,Water tank truck not arriving on schedule; residents without supply,water,low
+Angul,Pothole at intersection near college affecting commuters,pothole,medium
+Cuttack,Streetlight outages near Cuttack Road crossing,streetlight,high
+Ganjam,Garbage piled up behind market; sanitation team not responding,garbage,high
+Dhenkanal,Water leakage under flyover causing damp road,water,medium
+Sundargarh,Public park drainage blocked; water stagnation observed,others,low
+Sonepur,Pothole on NH5 near bridge; risk to bikes,pothole,high
+Phulbani,Streetlight out for weeks in town square,streetlight,low
+Baripada,Overflowing garbage bins near bus stand,garbage,medium
+Nayagarh,Water supply disruption during peak hours in colonies,water,high
+Bhubaneswar,large pothole on main road near Raj Bhavan,pothole,high
+Cuttack,streetlight not working in Patapada lane,streetlight,medium
+Rourkela,garbage accumulation near Market Square,garbage,low
+Berhampur,water supply disrupted for residents,water,high
+Sambalpur,pothole causing traffic at crossroad,pothole,medium
+Puri,streetlight bulb flickering near beach,streetlight,low
+Balasore,garbage bins overflowing in market area,garbage,medium
+Baripada,water line leak in residential colony,water,high
+Jharsuguda,sinkhole near bus stand,pothole,high
+Angul,streetlight outage on NH,streetlight,medium
+Dhenkanal,garbage not collected from ward 12,garbage,low
+Kendrapara,water supply irregular in coastal block,water,medium
+Bargarh,pothole near jail road,pothole,low
+Jeypore,streetlight out near market complex,streetlight,high
+Bhadrak,garbage dumping at nullah bank,garbage,low
+Rayagada,water supply restored after outage,water,low
+Paradeep,pothole on main highway approaching port,pothole,high
+Koraput,streetlight in hill road not functioning,streetlight,medium
+Sundargarh,garbage pickup delayed in township,garbage,medium
+Phulbani,water tank empty in local council colony,water,high
+Bhubaneswar,large pothole on main road near Puri Street,pothole,high
+Cuttack,streetlight not working around CDA circle,streetlight,medium
+Rourkela,garbage not collected in ward 12,garbage,low
+Berhampur,water leakage from main supply line,water,high
+Sambalpur,pothole near market area causing traffic,pothole,medium
+Puri,streetlight outage along coastal road,streetlight,low
+Balasore,garbage littering on beach road,garbage,medium
+Baripada,water supply disrupted in residential colony,water,high
+Jharsuguda,pothole repaired but new crack appearing,pothole,low
+Angul,streetlight flickering in market area,streetlight,medium
+Dhenkanal,garbage bins overflowing near hospital,garbage,high
+Kendrapara,water pump not functioning in ward 3,water,high
+Bargarh,pothole on highway causing jolt to commuters,pothole,medium
+Jeypore,streetlight outage near school premises,streetlight,low
+Bhadrak,garbage dump near temple area,garbage,medium
+Rayagada,water leakage from old pipe near market,water,high
+Paradeep,pothole blocks drainage on port road,pothole,high
+Koraput,streetlight not turning on after dusk,streetlight,medium
+Sundargarh,garbage not collected in industrial area,garbage,low
+Phulbani,water supply restored but low pressure,water,medium
+Bhubaneswar,Large pothole on main road near master plan crossroads,pothole,high
+Cuttack,Streetlight not working at traffic signal near mandir,streetlight,medium
+Rourkela,"Garbage piling up near market complex, smells",garbage,high
+Berhampur,Water supply disrupted in old town due to pipeline leak,water,high
+Sambalpur,Large pothole causing traffic delay on main road,pothole,medium
+Puri,Streetlight flickering and going off at evening,streetlight,low
+Balasore,Garbage dump not cleared; litter scattered,garbage,medium
+Baripada,Water supply irregular in housing colony,water,medium
+Jharsuguda,Pothole near bus stand causing damage to bikes,pothole,high
+Angul,Non-functional streetlight near hospital gate,streetlight,low
+Dhenkanal,Garbage not collected in ward 12 for 3 days,garbage,medium
+Kendrapara,Collapsed drain leading to waterlogging on road,water,high
+Bargarh,Pothole near school entrance; risk for students,pothole,high
+Jeypore,Streetlight not functioning on main market road,streetlight,medium
+Bhadrak,Garbage not collected in colony after rain,garbage,low
+Rayagada,Water supply resumed after long outage,water,low
+Paradeep,Pothole filled but reappears after rain,pothole,medium
+Koraput,Streetlight outage near college campus,streetlight,high
+Sundargarh,Garbage cart not collected this morning,garbage,low
+Phulbani,Water leak in lane causing muddy road,water,medium
